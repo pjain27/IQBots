@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Testing Anywhere 9.4\Testing Anywhere\TAPlayer.exe" "/fC:\IQBot_TestData\TaskBots\AllFieldPass_Verification.tamx/b"

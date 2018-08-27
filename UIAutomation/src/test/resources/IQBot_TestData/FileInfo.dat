@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities>
+  <Entity Name="VisionBot_Training.atmx">
+    <Properties>
+      <Property Name="LastRunTime">08/21/2017 11:58:17</Property>
+      <Property Name="RunDuration">00:01:58</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+  <Entity Name="IQBot_Command_Verification.tamx">
+    <Properties>
+      <Property Name="LastRunTime">08/28/2017 12:06:39</Property>
+      <Property Name="RunDuration">00:00:28</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+</Entities>

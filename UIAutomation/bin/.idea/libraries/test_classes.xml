@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="test-classes">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/test-classes/javax-crypto.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/test-classes/jwt-generator.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

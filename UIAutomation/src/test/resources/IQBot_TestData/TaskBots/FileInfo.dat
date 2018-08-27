@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities>
+  <Entity Name="IQBot_Command_Verification.tamx">
+    <Properties>
+      <Property Name="LastRunTime">09/12/2017 13:53:46</Property>
+      <Property Name="RunDuration">00:00:34</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+  <Entity Name="Upload_Production_Documents.atmx">
+    <Properties>
+      <Property Name="LastRunTime">09/12/2017 13:53:50</Property>
+      <Property Name="RunDuration">00:00:00</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+  <Entity Name="VisionBot_Training.atmx">
+    <Properties>
+      <Property Name="LastRunTime">09/12/2017 13:51:14</Property>
+      <Property Name="RunDuration">00:01:52</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+  <Entity Name="Validate_Output_Folder_Files.atmx">
+    <Properties>
+      <Property Name="LastRunTime">09/12/2017 14:00:47</Property>
+      <Property Name="RunDuration">00:00:00</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+  <Entity Name="Validate_Validator_Files.tamx">
+    <Properties>
+      <Property Name="LastRunTime">09/12/2017 14:01:32</Property>
+      <Property Name="RunDuration">00:00:28</Property>
+      <Property Name="Status">Complete</Property>
+    </Properties>
+  </Entity>
+</Entities>
