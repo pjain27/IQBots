@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="trace" name="IQBotTestAutomation" packages="">
+ <Appenders>
+  <File name="my_file_appender" fileName="C:\IQBot_TestData\executionLogs.csv">
+   <param name="Append" value="false" />
+   <CsvParameterLayout delimiter=","/>
+  </File>
+ </Appenders>
+
+<Loggers>
+  <Root level="info">
+   <AppenderRef ref="my_file_appender" />
+  </Root>
+ </Loggers>
+</Configuration>

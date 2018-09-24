@@ -1,0 +1,228 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "enum": [true]
+    },
+    "errors": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "$ref": "#/definitions/ProjectDetail"
+    }
+  },
+  "required": [
+    "success", "data"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "ProjectDetail": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "organizationId": {
+          "type": "string"
+        },
+        "projectTypeId": {
+          "type": "string"
+        },
+        "projectType": {
+          "type": "string"
+        },
+        "confidenceThreshold": {
+          "type": "integer"
+        },
+        "numberOfFiles": {
+          "type": "integer"
+        },
+        "numberOfCategories": {
+          "type": "integer"
+        },
+        "unprocessedFileCount": {
+          "type": "integer"
+        },
+        "primaryLanguage": {
+          "type": "string"
+        },
+        "accuracyPercentage": {
+          "type": "number"
+        },
+        "visionBotCount": {
+          "type": "integer"
+        },
+        "currentTrainedPercentage": {
+          "type": "number"
+        },
+        "categories": {
+          "type": ["array", "null"],
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        },
+        "fields": {
+          "$ref": "#/definitions/FieldDetail"
+        },
+        "projectState": {
+          "type": "string"
+        },
+        "environment": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": ["number", "null"],
+          "oneOf": [{
+            "type": "null"
+          }, {
+            "type": "number",
+            "pattern": "[+-]?[1-9]+[0-9]*"
+          }]
+        },
+        "createdAt": {
+          "type": "number",
+          "pattern": "[+-]?[1-9]+[0-9]*"
+        },
+        "ocrEngineDetails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OCREngineDetails"
+          }
+        }
+      }
+    },
+    "FieldDetail": {
+      "type": "object",
+      "properties": {
+        "standard": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "custom": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CustomFieldDetail"
+          }
+        }
+      }
+    },
+    "CustomFieldDetail": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      }
+    },
+    "Category": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "identity."
+        },
+        "name": {
+          "type": "string",
+          "description": "category name."
+        },
+        "visionBot": {
+          "type": ["null", "object"],
+          "oneOf": [
+            {"type": "null"},
+            {"$ref": "#/definitions/VisionBot"}
+          ]
+        },
+        "fileCount": {
+          "type": "integer",
+          "description": "number of classified files in this category"
+        },
+        "files": {
+          "type": "array",
+          "description": "obsolete, will return null",
+          "items": {
+            "$ref": "#/definitions/File"
+          }
+        },
+        "productionFileDetails": {
+          "$ref": "#/definitions/FileCount"
+        },
+        "stagingFileDetails": {
+          "$ref": "#/definitions/FileCount"
+        }
+      }
+    },
+    "VisionBot": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "currentState": {
+          "type": "string"
+        }
+      }
+    },
+    "File": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "processed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "FileCount": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "type": "integer"
+        },
+        "unprocessedCount": {
+          "type": "integer"
+        }
+      }
+    },
+    "OCREngineDetails": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": ["null", "string"]
+        },
+        "engineType": {
+          "type": ["null", "string"]
+        }
+      }
+    }
+  }
+}
